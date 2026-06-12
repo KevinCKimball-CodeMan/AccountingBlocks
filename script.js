@@ -97,6 +97,11 @@ const fallingSound = document.getElementById('falling-sound');
 const explosionSound = document.getElementById('explosion-sound');
 const kaChingSound = document.getElementById('ka-ching-sound');
 
+// Hide three sounds
+explosionSound.style.display = 'none';
+fallingSound.style.display = 'none';
+kaChingSound.style.display = 'none';
+
 const gameOverModal = document.getElementById('game-over-modal');
 const gameOverMessage = document.getElementById('game-over-message');
 const restartButton = document.getElementById('restart-button');
