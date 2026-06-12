@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    color: #000; /* Default text color to black */
+}
+
+#game-container {
+position: relative;
+width: 1200px;
+height: 800px;
+border: 2px solid #000;
+background-color: #fff;
+}
+
+#score-box {
+position: absolute;
+top: 10px;
+left: 50%;
+transform: translateX(-50%);
+border: 2px solid #000;
+padding: 10px;
+background-color: #fff;
+color: #000;
+text-align: center;
+}
+
+#welcome-message {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+background-color: #fff;
+border: 2px solid #000;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#base-blocks {
+position: absolute;
+bottom: 50px; /* Adjusted to accommodate the Permanent/Temporary Accounts blocks */
+width: 100%;
+height: 25px;
+display: flex;
+}
+
+#debit-credit-blocks {
+position: absolute;
+bottom: 25px; /* Above Permanent/Temporary Accounts blocks */
+width: 100%;
+height: 25px;
+display: flex;
+}
+
+#permanent-accounts-blocks {
+position: absolute;
+bottom: 0; /* At the very bottom, touching Debit/Credit blocks */
+width: 100%;
+height: 25px;
+display: flex;
+}
+
+.base-block {
+    flex: 1;
+    text-align: center;
+    line-height: 25px;
+    color: #000; /* Set font color to black */
+    border: 1px solid #000; /* Optional: add border for better visibility */
+}
+
+.debit-credit-block {
+    flex: 1;
+    text-align: center;
+    line-height: 25px;
+    color: #000; /* Set font color to black */
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.permanent-accounts-block {
+    flex: 1;
+    text-align: center;
+    line-height: 25px;
+    color: #000; /* Set font color to black */
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+.falling-block {
+    position: absolute;
+    width: 100px; /* Keep the width the same */
+    height: 70px; /* Increased height */
+    text-align: center;
+    line-height: normal; /* Allow text wrapping */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff !important; /* Set font color to white and use !important to override other styles */
+    padding: 5px; /* Added padding for text wrapping */
+    box-sizing: border-box; /* Ensure padding doesn't affect size */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    text-align: center;
+}
+
+#restart-button, #exit-button {
+margin-top: 10px;
+padding: 10px 20px;
+background-color: #4CAF50; /* Green */
+color: white;
+border: none;
+cursor: pointer;
+}
+
+#exit-button {
+background-color: #f44336; /* Red */
+}
+
+#restart-button:hover, #exit-button:hover {
+opacity: 0.8;
+}

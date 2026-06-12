@@ -1,0 +1,44 @@
+<head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounting Blocks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="score-box">
+            <p>Correct: <span id="correct-score">0</span></p>
+            <p>Incorrect: <span id="incorrect-score">0</span></p>
+            <p>Final score: <span id="final-score">0</span></p>
+            <p>Time left: <span id="time-left">120</span> seconds</p>
+        </div>
+        <div id="welcome-message">
+            <p>Welcome to Accounting Blocks</p>
+            <p>This game will help you learn to classify financial accounts</p>
+            <p>as well as learn your increases and decreases and your</p>
+            <p>debits and credits.</p>
+            <p>Press Enter to start the game and account blocks will begin to fall.</p>
+            <p>Use your left, right, up and down arrow keys to position the falling block</p>
+            <p>over its correct account classification and its correct debit or credit effect.</p>
+            <p>The game will last two minutes, but you can press ESC to end the game early.</p>
+        </div>
+        <div id="base-blocks"></div>
+        <div id="permanent-accounts-blocks"></div>
+        <div id="debit-credit-blocks"></div>
+    </div>
+    <audio id="falling-sound" src="falling-sound.m4a" loop></audio>
+    <audio id="explosion-sound" src="explosion-sound.m4a"></audio>
+    <audio id="ka-ching-sound" src="ka-ching-sound.m4a"></audio>
+    <div id="game-over-modal" class="modal">
+        <div class="modal-content">
+            <p id="game-over-message"></p>
+            <button id="restart-button">To RESTART, Close Browser and Double-click on AccountingBlocks.html Again</button>
+            <button id="exit-button">Press to EXIT, then Close Browser</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
